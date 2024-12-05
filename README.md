@@ -1,2 +1,2 @@
 # CtD_Intro_Demo
-Jupiter Intro Class instructional repo
+Instructional Demo by Jason K.
