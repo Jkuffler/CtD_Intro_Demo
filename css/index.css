@@ -9,6 +9,23 @@ h1 {
     text-align: right;
   }
 
+section {
+    margin: 3em;
+    padding: 5em;
+}
 section, p, ul {
     margin: 1.75em;
+}
+
+img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5em;
+    list-style-type: none;
+    position: sticky;
 }
