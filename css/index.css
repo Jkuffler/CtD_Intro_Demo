@@ -3,6 +3,20 @@ body {
   font-family: "Press Start 2P", system-ui;
   background-color: darkolivegreen;
   display: grid;
+  text-align: center;
+}
+
+a:link {
+  color: cornsilk;
+  text-decoration:none;
+}
+a:visited {
+  color: violet;
+  text-decoration:none;
+}
+a:hover {
+  color: black;
+  text-decoration:none;
 }
 
 h1,
@@ -17,20 +31,18 @@ section {
   margin: 0.5em;
   padding: 0.5em;
   border-style: double;
+  border-width: 1.5em;
 }
 
 p,
 ul {
+  background-color: rgb(121, 153, 66);
   margin: 1.75em;
-  list-style-type: square;
+  list-style: square inside;
 }
 
 img {
   max-width: 50%;
-}
-
-nav {
-  position: sticky;
 }
 
 #nav {
