@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  text-align: center;
   font-family: "Press Start 2P", system-ui;
   background-color: darkolivegreen;
   text-align: center;
@@ -14,14 +13,13 @@
 
 
 /* nav */
-nav {
+.nav {
   font-size: .8em;
-  display: flex;
-  background-color: rgb(3, 4, 5);
+  background-color: rgba(255, 255, 255, 0);
   position: sticky;
   top: 0;
   overflow: hidden;
-  width: fit-content;
+  width: auto;
 }
 
 
@@ -56,6 +54,7 @@ ul{
   flex-direction: row;
   gap: 1.75em;
   list-style-type: none;
+  /* width: fit-content; */
 }
 
 img {
@@ -75,23 +74,36 @@ img {
 
 /* other devices largest to smallest */
 
-@media (max-width: 1000px) {
+/* Lg Tablet */
+@media only screen and (max-width: 1000px) {
   body {
     margin: 1em;
     background-color: rgb(238, 204, 197);
   }
+  ul {
+    flex-direction: column;
+  } 
 }
-
-@media (max-width: 800px) {
+/* Med Small Tablet */
+@media only screen and (max-width: 800px) {
   body {
     margin: 1em;
     background-color: rgb(245, 157, 142);
+  } 
+   ul {
+    flex-direction: column;
   }
 }
 
-@media (max-width: 600px) {
+/* Large Phone */
+@media only screen and (max-width: 600px) {
   body {
     margin: 1em;
     background-color: tomato;
   }
+  ul {
+    flex-direction: column;
+  }
 }
+
+/* Small Phone */
