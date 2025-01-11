@@ -1,31 +1,109 @@
-body {
-    background-color: darkolivegreen;
+/* standard desktop layout */
+ 
+ body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", system-ui;
+  background-color: darkolivegreen;
+  text-align: center;
 }
 
-h1 {
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    text-align: right;
-  }
 
+/* nav */
+.nav {
+  font-size: .8em;
+  background-color: rgba(255, 255, 255, 0);
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  width: auto;
+}
+
+
+/* links */
+a {
+  text-decoration:none;
+}
+a:link {
+  color: cornsilk;
+}
+a:visited {
+  color: yellowgreen;
+}
+a:hover {
+  color: rgb(17, 211, 43);
+}
+
+
+/* main content items */
 section {
-    margin: 3em;
-    padding: 5em;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+  border-style: double;
+  border-width: .75em;
+  width:fit-content;
 }
-section, p, ul {
-    margin: 1.75em;
+
+ul{
+  display: flex;
+  flex-direction: row;
+  gap: 1.75em;
+  list-style-type: none;
+  /* width: fit-content; */
 }
 
 img {
-    max-width: 50%;
-    max-height: 50%;
+  max-width: 50%;
 }
 
-#nav {
-    display: flex;
-    flex-direction: row;
-    gap: 3.5em;
-    list-style-type: none;
-    position: sticky;
+#experience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
 }
+
+.xpitem {
+  border-style: dotted;
+}
+
+
+/* other devices largest to smallest */
+
+/* Lg Tablet */
+@media only screen and (max-width: 1000px) {
+  body {
+    margin: 1em;
+    background-color: rgb(238, 204, 197);
+  }
+  ul {
+    flex-direction: column;
+  } 
+}
+/* Med Small Tablet */
+@media only screen and (max-width: 800px) {
+  body {
+    margin: 1em;
+    background-color: rgb(245, 157, 142);
+  } 
+   ul {
+    flex-direction: column;
+  }
+}
+
+/* Large Phone */
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 1em;
+    background-color: tomato;
+  }
+  ul {
+    flex-direction: column;
+  }
+}
+
+/* Small Phone */
