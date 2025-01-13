@@ -19,7 +19,7 @@
   position: sticky;
   top: 0;
   overflow: hidden;
-  width: auto;
+  /* width: auto; */
 }
 
 
@@ -47,14 +47,15 @@ section {
   border-style: double;
   border-width: .75em;
   width:fit-content;
+  max-width: 50em;
 }
 
 ul{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 1.75em;
   list-style-type: none;
-  /* width: fit-content; */
 }
 
 img {
@@ -63,10 +64,17 @@ img {
 
 #experience {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1em;
 }
 
+#skills {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1em;
+}
 .xpitem {
   border-style: dotted;
 }
@@ -82,6 +90,8 @@ img {
   }
   ul {
     flex-direction: column;
+    flex-wrap: wrap;
+
   } 
 }
 /* Med Small Tablet */
@@ -91,7 +101,8 @@ img {
     background-color: rgb(245, 157, 142);
   } 
    ul {
-    flex-direction: column;
+    flex-wrap: wrap;
+
   }
 }
 
@@ -102,7 +113,8 @@ img {
     background-color: tomato;
   }
   ul {
-    flex-direction: column;
+    flex-wrap: wrap;
+
   }
 }
 
