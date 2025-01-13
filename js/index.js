@@ -21,6 +21,6 @@ const skillsList = skillsSection.querySelector("ul")
 
 for(let i=0; i < skills.length; i++) {
     const skill = document.createElement("li")
-    skill.innerHTML = skills[i]
+    skill.textContent = skills[i]
     skillsList.appendChild(skill)
 }
