@@ -20,6 +20,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#connect">Contact</a></li>
+                <li><a href="#messages">Messages</a></li>
             </ul>
         </nav>
     </div>
@@ -65,6 +66,19 @@
             <li><a href="">Email</a></li>
             <li><a href="">LinkedIn</a></li>
         </ul>
+    </section>
+    <section id="messages">
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="name">Your Name</label>
+            <input type="text" name="usersName" required:true placeholder="What people call you">
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="usersEmail" required:true placeholder="user@domain.idk">
+            <br>
+            <label for="message">Message</label>
+            <textarea name="usersMessage" required:true placeholder="Inevitable"></textarea>
+        </form>
     </section>
     <script src="js/index.js"></script>
 </body>
