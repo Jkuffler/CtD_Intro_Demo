@@ -27,7 +27,7 @@ for(let i=0; i < skills.length; i++) {
 
 // **MESSAGES**
 const messageForm = document.querySelector("form[name='leave_message']");
-console.log(messageForm)
+// console.log(messageForm)
 messageForm.addEventListener("submit", handleSubmit)
 
 function handleSubmit(e) {
@@ -36,6 +36,5 @@ function handleSubmit(e) {
     const email = e.target.usersEmail.value
     const message = e.target.usersMessage.value
 
-    console.log(name, email, message)
+    console.log(`name: ${name}, email: ${email}, message: ${message}`)
 }
-
