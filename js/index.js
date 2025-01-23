@@ -36,10 +36,12 @@ function handleSubmit(e) {
     const email = e.target.usersEmail.value
     const message = e.target.usersMessage.value
     // console.log(`name: ${name}, email: ${email}, message: ${message}`)
-    const messageSection = document.getElementById("messages")
-    // console.log(messageSection)
+    // const messageSection = document.getElementById("messages")
+    // console.log(messageSection) I DONT THINK THESE 3 LINES ARE NECESSARY AT ALL
     const messageList = document.getElementById("msgList")
     // console.log(messageList)
+
+    // CREATING MESSAGE
     const newMessage = document.createElement("li")
     const nameEmail = document.createElement("a")
     nameEmail.textContent = name
@@ -48,8 +50,21 @@ function handleSubmit(e) {
     newMessage.appendChild(nameEmail)
     const msgTxt = document.createElement("span")
     msgTxt.textContent = ` wrote: ${message}`
+    // REMOVE BUTTON
+    const removeButton = document.createElement("button")
+    removeButton.innerText = "R E M O V E"
+    removeButton.setAttribute("type", "button")
+    
+    removeButton.addEventListener("click", handleRemove)
+    
+    function handleRemove() {
+        const entry = removeButton.closest("li")
+        entry.remove()
+    }
+    // DISPLAY MESSAGE IN ALL ITS GLORY
     newMessage.appendChild(msgTxt)
+    newMessage.appendChild(removeButton)
     messageList.appendChild(newMessage)
 
-    messageForm.reset()
+    // messageForm.reset() remember to uncomment this when done testing
 }
