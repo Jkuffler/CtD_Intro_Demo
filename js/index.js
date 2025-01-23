@@ -35,6 +35,21 @@ function handleSubmit(e) {
     const name = e.target.usersName.value
     const email = e.target.usersEmail.value
     const message = e.target.usersMessage.value
+    // console.log(`name: ${name}, email: ${email}, message: ${message}`)
+    const messageSection = document.getElementById("messages")
+    // console.log(messageSection)
+    const messageList = document.getElementById("msgList")
+    // console.log(messageList)
+    const newMessage = document.createElement("li")
+    const nameEmail = document.createElement("a")
+    nameEmail.textContent = name
+    nameEmail.href = `mailto:${email}`
+    nameEmail.target = "_blank"
+    newMessage.appendChild(nameEmail)
+    const msgTxt = document.createElement("span")
+    msgTxt.textContent = ` wrote: ${message}`
+    newMessage.appendChild(msgTxt)
+    messageList.appendChild(newMessage)
 
-    console.log(`name: ${name}, email: ${email}, message: ${message}`)
+    messageForm.reset()
 }
