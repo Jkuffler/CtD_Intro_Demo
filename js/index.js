@@ -66,5 +66,5 @@ function handleSubmit(e) {
     newMessage.appendChild(removeButton)
     messageList.appendChild(newMessage)
 
-    // messageForm.reset() remember to uncomment this when done testing
+    messageForm.reset() remember to uncomment this when done testing
 }
