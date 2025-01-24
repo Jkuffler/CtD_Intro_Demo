@@ -32,13 +32,16 @@ messageForm.addEventListener("submit", handleSubmit)
 
 function handleSubmit(e) {
     e.preventDefault();
+      
+ 
     const name = e.target.usersName.value
     const email = e.target.usersEmail.value
     const message = e.target.usersMessage.value
     // console.log(`name: ${name}, email: ${email}, message: ${message}`)
-    // const messageSection = document.getElementById("messages")
-    // console.log(messageSection) I DONT THINK THESE 3 LINES ARE NECESSARY AT ALL
-    const messageList = document.getElementById("msgList")
+    const messageSection = document.querySelector("#messages")
+    // console.log(messageSection)
+    messageSection.style.display = "flex"
+    const messageList = document.querySelector("#msgList")
     // console.log(messageList)
 
     // CREATING MESSAGE
@@ -60,11 +63,16 @@ function handleSubmit(e) {
     function handleRemove() {
         const entry = removeButton.closest("li")
         entry.remove()
+        if (messageList.children.length === 0) {
+            messageSection.style.display = "none";
+        }
+           
     }
     // DISPLAY MESSAGE IN ALL ITS GLORY
     newMessage.appendChild(msgTxt)
     newMessage.appendChild(removeButton)
     messageList.appendChild(newMessage)
-
-    messageForm.reset() 
+    // Show message section if it's hidden
+    messageSection.style.display = "flex";
+    messageForm.reset()  
 }
