@@ -76,3 +76,18 @@ function handleSubmit(e) {
     messageSection.style.display = "flex";
     messageForm.reset()  
 }
+
+// **FETCH GITHUB REPOS**
+fetch("https://api.github.com/users/Jkuffler/repos")
+    .then((response) => {
+        if (!response.ok) {
+        throw new Error("Request failed");
+    }
+    return response.json(); // The JSON shuffle parse line!
+  })
+  .then((data) => {
+    console.log(data); // Check valid
+  })
+  .catch((error) => {
+    console.error("An error occurred:", error);
+})
