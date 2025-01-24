@@ -61,6 +61,10 @@ img {
   max-width: 50%;
 }
 
+#messages {
+  display: none;
+}
+
 #experience {
   display: flex;
   flex-wrap: wrap;
