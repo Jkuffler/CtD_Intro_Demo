@@ -50,9 +50,9 @@ section {
   max-width: 50em;
 }
 
-ul{
+ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1.75em;
   list-style-type: none;
